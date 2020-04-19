@@ -1,0 +1,49 @@
+<div class="box bg-dark ">
+    <div class="box1 bg-dark">
+        <div class="box-title bg-dark text-white">
+            <p>
+                <b>Uzupełnij dane:</b>
+            </p>
+        </div><br>
+        <form class="inside text-white">
+            <div class="form-group">
+                <label for="imie">Imie</label>
+                <input type="email" class="form-control" id="imie">
+            </div>
+            <div class="form-group">
+                <label for="nazwisko">Nazwisko</label>
+                <input type="text" class="form-control" id="nazwisko">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
+            </div>
+            Płeć
+            <br>
+            <input type="radio" name="nazwa" value="wartość" checked> Kobieta
+
+            <input type="radio" name="nazwa" value="wartość"> Mężczyzna
+            <br>
+            <div class="form-group">
+                <label for="comment">Opis</label>
+                <textarea class="form-control" rows="5" id="comment"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="wiek">Wiek</label>
+                <input type="number" class="form-control" id="wiek">
+            </div>
+            <div class="form-group">
+                <label for="stanCywilny">Stan cywilny</label>
+                <select id="stanCywilny" class="form-control">
+                    <option selected>Wybierz...</option>
+                    <option>Panna</option>
+                    <option>Kawaler</option>
+                    <option>Zamężna</option>
+                    <option>Żonaty</option>
+                </select>
+            </div>
+            <button type="reset" class="btn btn-success btn-sm buttonLook">Wyczyść</button>
+            <button type="submit" class="btn btn-success btn-sm buttonLook">Wyślij</button>
+        </form>
+    </div>
+</div>
