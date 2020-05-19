@@ -39,7 +39,7 @@ import { AddPostComponent } from './components/add-post/add-post.component';
     TextFormatDirective,
     FilterPipe,
     SelectizeComponent,
-    AddPostComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,

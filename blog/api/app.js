@@ -1,13 +1,12 @@
 'use strict';
 
-const express = require("express");
-const morgan = require("morgan");
-const mongoose = require("mongoose");
-const config = require("config");
-const routes = require("REST/routes");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-
+import express from 'express';
+import morgan from 'morgan';
+import mongoose from 'mongoose';
+import config from './config';
+import routes from './REST/routes';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 const app = express();
 
 
@@ -17,12 +16,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(cors());
 
-
 mongoose.connect(config.databaseUrl, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}, (error) => {
   if (error) {
     console.error(error);
-  }
-  else {
+  } else {
     console.log('Connect with database established');
   }
 });
@@ -37,5 +34,5 @@ process.on('SIGINT', () => {
 
 routes(app);
 app.listen(config.port, () => {
-  console.info(`Server is running at ${config.port}`)
+	console.info(`Server is running at ${config.port}`)
 });

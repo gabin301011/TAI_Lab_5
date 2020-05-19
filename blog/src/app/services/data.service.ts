@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 @Injectable()
 export class DataService {
 
-  private url = 'http://localhost:3000';
+  private url = 'https://blogtai.herokuapp.com';
 
   constructor(private http: HttpClient) { }
 
@@ -21,8 +21,7 @@ export class DataService {
     return this.http.post(this.url+'/api/posts/',data);
   }
 
-  createOrUpdate(post) {
+  createOrUpdate(post: any) {
     return this.http.post(`${this.url}/api/posts`, post);
   }
-
 }

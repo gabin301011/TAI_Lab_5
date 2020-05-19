@@ -1,4 +1,5 @@
 <selectize></selectize>
+<a [routerLink]="['/add-post']">Dodaj Posta</a>
 <div *ngFor="let item of items$ | filter:filterText">
     <blog-item [id]="item.id" [image]="item.url" [text]="item.content" style="align-items: center; align-self: center;">
 

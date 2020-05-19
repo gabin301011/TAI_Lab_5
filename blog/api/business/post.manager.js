@@ -35,7 +35,6 @@ function create(context) {
     query: query,
     get: get,
     createNewOrUpdate: createNewOrUpdate,
-    search: search
   };
 }
 

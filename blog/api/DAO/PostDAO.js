@@ -2,7 +2,7 @@
 
 import mongoose from 'mongoose';
 import uniqueValidator from 'mongoose-unique-validator';
-import mongoConverter from '../service/mongoConverter';
+import mongoConverter from '../services/mongoConverter';
 import * as _ from "lodash";
 
 const postSchema = new mongoose.Schema({
@@ -34,7 +34,12 @@ async function get(id) {
 }
 
 async function search(content) {
-  return PostModel.findOne({content: content.content}).then(function (result) {
+  if(content.content === ''){
+    return;
+  }
+
+  let regex = new RegExp('.*' + content.content + '.*', 'i');
+  return PostModel.find({content: regex}).then(function (result) {
     if (result) {
       return mongoConverter(result);
     }
