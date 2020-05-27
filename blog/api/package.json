@@ -1,12 +1,13 @@
 {
-  "name": "blog-api",
+  "name": "blog_api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/index.js"
   },
-  "author": "Arkadiusz Kopacz",
+  "author": "Michal",
   "license": "ISC",
   "dependencies": {
     "babel-core": "6.26.3",
@@ -25,6 +26,6 @@
     "sha1": "^1.1.1"
   },
   "devDependencies": {
-    "nodemon": "2.0.3"
+    "nodemon": "^2.0.3"
   }
 }
